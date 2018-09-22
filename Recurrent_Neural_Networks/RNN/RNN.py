@@ -62,7 +62,7 @@ regressor.compile(optimizer = 'adam', loss = 'mean_squared_error')
 # Fit LSTM to training data
 regressor.fit(X_train, y_train, epochs = 100, batch_size = 32)
 
-# Getting the predicted stock price of 2017
+# RNN Can only predict 1 day in advance because it takes the last 60 days to make next prediction so need test set
 dataset_total = pd.concat((dataset_train['Open'], dataset_test['Open']), axis = 0)
 inputs = dataset_total[len(dataset_total) - len(dataset_test) - 60:].values
 inputs = inputs.reshape(-1,1)
@@ -74,7 +74,6 @@ X_test = np.array(X_test)
 X_test = np.reshape(X_test, (X_test.shape[0], X_test.shape[1], 1))
 predicted_stock_price = regressor.predict(X_test)
 predicted_stock_price = scaling.inverse_transform(predicted_stock_price)
-
 # Visualising the results
 plt.plot(real_stock_price, color = 'red', label = 'Real Google Stock Price')
 plt.plot(predicted_stock_price, color = 'blue', label = 'Predicted Google Stock Price')
