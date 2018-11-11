@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../OpenCV/FaceIdentifier/.idea/FaceIdentifier.iml" filepath="$PROJECT_DIR$/../OpenCV/FaceIdentifier/.idea/FaceIdentifier.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../../Co-op/PracticeProblems/Python/.idea/Python.iml" filepath="$PROJECT_DIR$/../../../Co-op/PracticeProblems/Python/.idea/Python.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Self_Organizing_Maps.iml" filepath="$PROJECT_DIR$/.idea/Self_Organizing_Maps.iml" />
     </modules>
   </component>
